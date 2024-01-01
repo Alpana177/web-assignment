@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(to right, #ede2b0, plum); /* Gradient from skin color to pink */    font-family: 'Arial', sans-serif;
+    
+}
+
+/* Navigation bar styles */
+nav {
+    background-color: rgba(218, 89, 87, 0.877); /* Green color for the navbar */
+    color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1ch;
+}
+
+/* Hamburger menu styles */
+.menu-icon {
+    cursor: pointer;
+    font-size: 10px;
+    font-weight:bold;
+    font-stretch: expanded;
+    /* display: none; Hide by default on larger screens */
+}
+
+/* Menu items */
+nav div a {
+    font-size: 18px;
+    margin-right: 50px;
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+    font-stretch: expanded;
+    font-family:'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+}
+
+/* Container for the main content */
+.main-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    background: linear-gradient(to right, #eae3a3, plum); /* Gradient from skin color to pink */
+    
+}
+
+/* Left side with an image */
+/* Right side with text and button */
+.image-container,.img-grid {
+    flex: 1;
+    position: relative;
+}
+
+/* Overlay styles */
+.image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background: rgba(0, 0, 0, 0.5); Semi-transparent black overlay */
+}
+
+/* Image styles */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Text container styles */
+.text-container {
+    flex: 1;
+    padding: 20px;
+   
+    text-align: center;
+    position: relative;
+}
+
+
+/* Right side with text and button */
+.text-container {
+    flex: 1;
+    padding: 100px;
+    text-align: left;
+    justify-content: left;
+    
+}
+.text-container h1{
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+.text-container p{
+    font-size: large;
+    color: rgba(74, 71, 71, 0.944);
+    letter-spacing: 0px;
+    word-spacing: 2px;
+
+}
+
+.main-container1,.img-grid{
+    display:flex;
+    float: left;
+}
+
+.main-container1{
+    margin: 100px;
+}
+.tile
+{
+    margin:50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    background-color: rgba(218, 89, 87, 0.877);
+    width: 30%;
+    padding:20px;
+    height: max-content;
+}
+.tile h1{
+    font-size: 40px;
+    letter-spacing: 5px;
+    font-weight: bolder;
+}
+.tile a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+/* Responsive styles for small screens */
+@media only screen and (max-width: 1035px) {
+    .menu-icon {
+        display: none; /* Show on small screens */
+    }
+
+    nav div {
+        /* display: none; Hide the menu items by default on small screens */
+        display: block;
+        flex-direction: column;
+        margin: 10px;
+        align-items: center;
+    }
+
+    nav div.show {
+        display: flex; /* Show the menu items when the class 'show' is added */
+    }
+
+    nav div a {
+        display:inline-block;
+        margin: 20px;
+    }
+    .main-container{
+        flex-direction: column-reverse;
+    }
+    .main-container1{
+        flex-direction: column;
+    }
+    .tile{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .menu-icon {
+        display: block;
+    }
+    nav div{
+        display: none;
+    }
+    .text-container {
+        order: -1; /* Move the text-container above the image-container */
+    }
+    
+}
+
+
+/* Button styles */
+button {
+    background-color: rgba(218, 89, 87, 0.877); /* Green color for the navbar */
+    color: white; /* White text color */
+    padding: 15px 100px; /* Padding for better appearance */
+    font-size: 15px;  /*Font size */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add cursor pointer on hover */
+
+}
+
+/* Button hover styles */
+button:hover {
+    background-color: #d97772; /* Darker green background color on hover */
+    color: black; /* Change text color to yellow on hover */
+
+}
